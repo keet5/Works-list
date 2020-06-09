@@ -1,0 +1,86 @@
+table.workers-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.workers-list thead tr{
+    padding-bottom: 5px;
+}
+
+.workers-list img {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.workers-list tr {
+    margin: 10px;
+}
+
+.workers-list tbody tr:nth-child(2n-1) {
+    background-color: #edf5ef;
+}
+
+.workers-list th, .workers-list td {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.workers-list th {
+    background-color: #cccccc;
+}
+
+.workers-list td {
+    text-align: center;
+    /* padding: 0 2px; */
+    box-sizing: border-box;
+}
+
+.workers-list th:first-child, .workers-list td:first-child {
+    border-left: 0;
+}
+
+.workers-list th:last-child, .workers-list td:last-child {
+    border-right: 0;
+}
+
+
+.workers-list tbody tr:hover {
+    background-color: #a8f0b9;
+}
+
+.workers-list .resizer {
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    background-color: red;
+    top: 0;
+    right: -4px;
+    z-index: 2;
+    opacity: 1;
+}
+
+.workers-list .resizer:hover {
+    opacity: 1;
+    background-color: black;
+}
+
+.workers-list .sort {
+    position: relative;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.workers-list .sort-buttons {
+    /* position: absolute; */
+   margin-left: 10px;
+   opacity: 1;
+}

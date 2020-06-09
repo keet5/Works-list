@@ -1,0 +1,21 @@
+@import url(css/basic.css);
+@import url(css/header.css);
+@import url(css/workers-list.css);
+@import url(css/modal-window.css);
+@import url(css/button-add.css);
+
+@font-face {
+	font-family: BalsamiqSans;
+	src: url('fonts/BalsamiqSans-Bold.eot');
+	src: local('☺'), url('fonts/BalsamiqSans-Bold.woff') format('woff'), url('fonts/BalsamiqSans-Bold.ttf') format('truetype'), url('fonts/BalsamiqSans-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: BalsamiqSans;
+	src: url('fonts/BalsamiqSans-Regular.eot');
+	src: local('☺'), url('fonts/BalsamiqSans-Regular.woff') format('woff'), url('fonts/BalsamiqSans-Regular.ttf') format('truetype'), url('fonts/BalsamiqSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

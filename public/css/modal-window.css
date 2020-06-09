@@ -1,0 +1,99 @@
+.modal-window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.modal-window form {
+    width: 100%;
+    max-width: 960px;
+    /* height: 100%; */
+    min-height: 400px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 320px, 120px;
+    /* overflow: scroll; */
+    
+}
+
+.modal-window fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 0;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.modal-window label {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.modal-window__photo input {
+    display: none;
+}
+
+.modal-window__photo img {
+    margin: auto;
+    display: block;
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+}
+
+.modal-window input[type=text], .modal-window select, .modal-window input[type=checkbox], .modal-window input[type=date]  {
+    width: 50%;
+    margin: 15px 0px
+}
+
+fieldset.modal-window__control {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 960px) {
+    .modal-window form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 640px), 120px;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .modal-window__photo {
+        grid-column: 1 / -1;
+    }
+
+    
+
+    
+}
+
+@media screen and (max-width: 640px) {
+    .modal-window form {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 320px), 120px;
+        min-height: 100%;
+    }
+}
+

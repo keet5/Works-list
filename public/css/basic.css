@@ -1,0 +1,52 @@
+* {
+    font-family: BalsamiqSans, 'Balsamiq Sans', cursive;
+    font-size: 16px;
+}
+
+body {
+    font-family: BalsamiqSans, 'Balsamiq Sans', cursive;
+    margin: 0;
+    cursor: default;
+}
+
+
+::selection {
+    background: transparent;
+}
+
+button, input[type=submit], input[type=reset] {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px 10px;
+    box-shadow: 4px 4px 0px 0px black;
+    margin: 6px;
+    transition-property: all;
+    transition-duration: 0.1s;
+    width: 100px;
+}
+
+button:hover, input[type=submit]:hover, input[type=reset]:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+button:active, input[type=submit]:active, input[type=reset]:active {
+    background-color: black;
+    color: white;
+}
+
+
+
+input, select {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+img {
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+/* button:, input[type=submit]:hover, input[type=reset]:hover */
+
+
