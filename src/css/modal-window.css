@@ -83,10 +83,6 @@ fieldset.modal-window__control {
     .modal-window__photo {
         grid-column: 1 / -1;
     }
-
-    
-
-    
 }
 
 @media screen and (max-width: 640px) {
@@ -97,3 +93,9 @@ fieldset.modal-window__control {
     }
 }
 
+.modal-window__photo label {
+    background-image: url(../img/photo.jpg);
+    background-position: center;
+    background-clip: padding-box;
+    background-size: cover;
+}

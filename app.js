@@ -6,7 +6,7 @@ const Workers = require('./modules/WorkersDB.js').Workers;
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-app.use(express.static(resolve(__dirname, 'public')));
+app.use(express.static(resolve(__dirname, 'dist')));
 
 const storage = multer.memoryStorage()
 const upload = multer({ 

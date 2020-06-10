@@ -1,3 +1,7 @@
+import 'normalize.css';
+import './style.css';
+
+
 import Table from './js/Table.js';
 import ModalWindow from './js/ModalWindow.js';
 import Button from './js/Button.js';

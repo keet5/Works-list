@@ -48,5 +48,8 @@ img {
     border: 2px solid black;
 }
 /* button:, input[type=submit]:hover, input[type=reset]:hover */
-
+ 
+input {
+    outline: none;
+}
 

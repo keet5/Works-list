@@ -145,6 +145,7 @@ class Form extends HTMLConstructor {
     reset() {
         this.element.reset();
         this.fields.photo.input.reset();
+        this.buttonRemove.hide();
         Object.values(this.fields).forEach(field => {
             field.input.removeClass('highlight');
         });
@@ -195,13 +196,13 @@ class Input extends HTMLConstructor {
 }
 
 class InputPhoto extends Input {
-    constructor({ type, name }, src = 'img/photo.jpg') {
+    constructor({ type, name }) {
         super({
             type,
             name
         });
         this.img = document.createElement('img');
-        this.img.src = src;
+        this.img.alt = '';
 
         this.element.addEventListener('input', event => {
             this.img.src = URL.createObjectURL(this.element.files[0]);
@@ -217,13 +218,13 @@ class InputPhoto extends Input {
     }
 
     reset() {
-        this.img.src = 'img/photo.jpg';
+        this.img.src = '';
     }
 }
 
 class LabelPhoto extends HTMLConstructor {
-    constructor({ type, name }, src) {
-        let input = new InputPhoto({ type, name }, src);
+    constructor({ type, name }) {
+        let input = new InputPhoto({ type, name });
 
         super({
             tag: 'label',

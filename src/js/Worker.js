@@ -7,7 +7,7 @@ export default class Worker {
         this.row = new Row();
         this.row.value = data;
         this.id = id;
-        Worker.loaded[id] = this;
+        Worker.loadedWorkers[id] = this;
     }
 
     set value(data) {
@@ -22,13 +22,13 @@ export default class Worker {
 
         if (response.ok) {
             this.row.remove();
-            delete Worker.loaded[this.id];
+            delete Worker.loadedWorkers[this.id];
         } else {
             throw new Error(response.status);
         }
     }
 
-    static loaded = {};
+    static loadedWorkers = {};
 }
 
 export class Row extends HTMLConstructor {
@@ -106,6 +106,7 @@ class TdImg extends Td {
     constructor(n) {
         super(n);
         this.img = document.createElement('img');
+        this.img.alt = '';
         this.addChild(this.img);
     }
 

@@ -62,13 +62,13 @@ export default class Table extends HTMLConstructor {
 
     sort() {
         const funSorts = [
-            (a, b) => a.row.sortData[Sort.currentPanel - 2] > b.row.sortData[Sort.currentPanel - 2],
-            (a, b) => a.row.sortData[Sort.currentPanel - 2] < b.row.sortData[Sort.currentPanel - 2]
+            (a, b) => a.row.sortData[Sort.currentPanel - 2] > b.row.sortData[Sort.currentPanel - 2] ? 1 : -1,
+            (a, b) => a.row.sortData[Sort.currentPanel - 2] < b.row.sortData[Sort.currentPanel - 2] ? 1 : -1
         ];
 
-        const sortArr = Object.values(Worker.loaded).sort(funSorts[Sort.panel[Sort.currentPanel].status - 1]);
+        const sortArr = Object.values(Worker.loadedWorkers).sort(funSorts[Sort.panel[Sort.currentPanel].status - 1]);
         sortArr.forEach(worker => {
-            Worker.loaded[worker.id].row.remove();
+            Worker.loadedWorkers[worker.id].row.remove();
             this.addForSort(worker);
         })
     }
@@ -85,7 +85,7 @@ export default class Table extends HTMLConstructor {
     }
 
     search(str) {
-        Object.values(Worker.loaded).forEach(worker => {
+        Object.values(Worker.loadedWorkers).forEach(worker => {
             if (worker.row.forSearch.indexOf(str) !== -1) {
                 worker.row.show();
             } else {
