@@ -62,8 +62,8 @@ export default class Table extends HTMLConstructor {
 
     sort() {
         const funSorts = [
-            (a, b) => a.row.sortData[Sort.currentPanel - 2] > b.row.sortData[Sort.currentPanel - 2],
-            (a, b) => a.row.sortData[Sort.currentPanel - 2] < b.row.sortData[Sort.currentPanel - 2]
+            (a, b) => a.row.sortData[Sort.currentPanel - 2] > b.row.sortData[Sort.currentPanel - 2] ? 1 : -1,
+            (a, b) => a.row.sortData[Sort.currentPanel - 2] < b.row.sortData[Sort.currentPanel - 2] ? 1 : -1
         ];
 
         const sortArr = Object.values(Worker.loaded).sort(funSorts[Sort.panel[Sort.currentPanel].status - 1]);
